@@ -1,0 +1,92 @@
+body {
+    background: #F9F8FD;
+    font-family: 'Lexend Exa', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+
+  }
+  nav {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #EBECF1;
+    border-radius: 30px;
+    animation: slide-in 1s ease-out;
+
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  ul li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background 0.2s;
+  }
+
+  ul li a {
+    color: #A5A5A5;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  ul li:hover {
+    background: #61b744;
+    border-color: #61b744;
+  }
+
+  ul li:hover a {
+    color: #F9F8FD;
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-50px);
+    }
+    40% {
+      transform: translateY(20px);
+    }
+    70% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(15px);
+    }
+  }
+
+  /* Media queries para hacer el menú responsive */
+  @media (max-width: 768px) {
+    ul li:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    ul li:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    ul li {
+      padding: 10px;
+    }
+
+    ul li a {
+      font-size: 12px;
+    }
+  }
