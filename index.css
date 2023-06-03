@@ -93,6 +93,7 @@ body {
 
 
 
+
         .texto {
             margin: auto;
             text-align: center;
@@ -104,7 +105,7 @@ body {
             position: relative;
             width: 100% !important;
             height: 1000px;
-            background: green; /* IE */
+            background: green;
         }
         .main-img h1 {
             z-index: 2;
@@ -117,7 +118,7 @@ body {
             height: 26px;
             padding: 0;
             margin: 0;
-            margin-top: -13px; /* 1/2 height */
+            margin-top: -13px;
             text-align: center;
         }
         .main-img img {
