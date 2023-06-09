@@ -1,8 +1,11 @@
+body, html {
+  height: 100%; /* Establece altura 100% para ocupar toda la ventana */
+  margin: 0; /* Elimina márgenes por defecto */
+}
+
 body {
-    background: #F9F8FD;
-    font-family: 'Lexend Exa', sans-serif;
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(to bottom, #0084CF 0%, 40.382571732199786%, #E7BCA2 67.51739978790283%, 83.75869989395142%, #FFD9B1 100%);
+  font-family: "Lexend Exa", sans-serif;
   }
 
   .nav {
@@ -13,9 +16,12 @@ body {
   nav {
     position: relative;
     display: inline-block;
-    border: 2px solid #EBECF1;
-    border-radius: 30px;
     animation: slide-in 1s ease-out;
+    width: 100%;
+    border-top: 2px solid #EBECF1; /* Borde superior */
+    border-bottom: 2px solid #EBECF1; /* Borde inferior */
+    border-left: none; /* Sin borde izquierdo */
+    border-right: none; /* Sin borde derecho */
 
   }
 
@@ -40,19 +46,18 @@ body {
   }
 
   ul li a {
-    color: #A5A5A5;
+    color: #FFF;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.2s;
   }
-
   ul li:hover {
-    background: #61b744;
-    border-color: #61b744;
+    background: #66B5D6;
+    border-color: #66B5D6;
   }
 
   ul li:hover a {
-    color: #F9F8FD;
+    color: #6f6152;
   }
 
   @keyframes slide-in {
