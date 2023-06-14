@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-
-
-
 body, html{
   min-height: 100%;
   margin: 0;
@@ -19,7 +16,7 @@ body, html{
 
 body {
   background: linear-gradient(to bottom, #0084CF 0%, 40.382571732199786%, #E7BCA2 67.51739978790283%, 83.75869989395142%, #FFD9B1 100%);
-  font-family: "Lexend Exa", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   }
 
   .nav {
