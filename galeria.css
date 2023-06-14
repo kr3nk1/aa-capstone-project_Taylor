@@ -10,6 +10,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  font-size: calc(0.6em + 1vmin);
 }
 
 body {
@@ -28,6 +29,8 @@ body {
     animation: slide-in 1s ease-out;
     border: 2px solid #EBECF1;
     border-radius: 30px;
+    margin-top: 1rem;
+    box-shadow: 0 0 20px #66B5D6;
 
 
   }
@@ -41,53 +44,95 @@ body {
     list-style-type: none;
   }
 
-  ul li:not(:last-child) {
-    margin-right: 20px;
-  }
-
   ul li {
-    border: 2px solid transparent;
-    border-radius: 5px;
-    padding: 10px;
+    display: inline-block;
+    position: relative;
     transition: background 0.2s;
+    border: 2px solid transparent;
+    margin: 0;
+    padding: 0;
+
+
   }
 
   ul li a {
     color: #FFF;
+    position: relative;
+    display: block;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.2s;
-  }
-  ul li:hover {
-    background: #66B5D6;
-    border-color: #66B5D6;
+    padding: 1rem;
+    margin: 0;
   }
 
-  ul li:hover a {
-    color: #6f6152;
-  }
+ul li:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 
-  @keyframes slide-in {
-    0% {
-      transform: translateY(-50px);
-    }
-    40% {
-      transform: translateY(20px);
-    }
-    70% {
-      transform: translateY(10px);
-    }
-    100% {
-      transform: translateY(15px);
-    }
-  }
+}
+
+ul li:nth-child(2):hover::before,
+ul li:nth-child(3):hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #66B5D6;
+  z-index: 0;
+}
+
+ul li:first-child:hover::before {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: #66B5D6;
+  border-color: #66B5D6;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+ul li:last-child:hover::before {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #66B5D6;
+  z-index: 0;
+}
+
 h1 {
   font-weight: 400;
   color: #fff;
   text-align: center;
   padding: 0;
-  margin: 2rem 0;
-  font-size: 40px;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 30px;
+  text-shadow: #EBECF1 0px 0 5px;
+}
+
+.h1-spanContainer{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.linea {
+  background:linear-gradient(to bottom, #0084CF 0%, 40.382571732199786%, #E7BCA2 67.51739978790283%, 83.75869989395142%, #FFD9B1 100%);
+  height: 5px;
+  width: 100%;
+  display: block;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 5px #FFD9B1;
 }
 
 .galeria {
@@ -97,7 +142,7 @@ h1 {
   width: 95%;
   margin: auto;
   grid-gap: 10px;
-  padding: 0;
+  padding: auto;
   overflow: visible;
   position: relative;
 }
@@ -110,7 +155,6 @@ h1 {
   z-index: 1;
   position: relative;
   border-radius: 24px;
-
 }
 
 .galeria a:not(:first-child) {
@@ -119,19 +163,13 @@ h1 {
   box-shadow: 0 0 20px rgba(0, 0, 0, .75);
   border-radius: 24px;
   position: relative;
-
-
 }
 
 .galeria a:first-child {
   display: block;
   overflow: visible;
   position: relative;
-
-
-
 }
-
 
 .galeria a:not(:first-child):hover img {
   box-shadow: 0 0 20px rgba(0, 0, 0, .75);
@@ -146,25 +184,22 @@ h1 {
 }
 
 
+@keyframes slide-in {
+  0% {
+    transform: translateY(-50px);
+  }
+  40% {
+    transform: translateY(20px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
 @media screen and (max-width:1200px) {
-
-  ul li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  ul li:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  ul li {
-    padding: 10px;
-  }
-
-  ul li a {
-    font-size: 12px;
-  }
 
   .galeria {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -172,7 +207,7 @@ h1 {
 
   h1 {
     margin: 1rem;
-    font-size: 20px;
+    font-size: 2rem;
   }
   .galeria a img:first-child {
     margin-bottom: 10px;
@@ -190,7 +225,16 @@ h1 {
     z-index: 1;
 
   }
+}
 
+@media screen and (max-width: 768px) {
 
+  h1 {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
 
+  ul li a {
+    font-size: 0.7rem;
+  }
 }

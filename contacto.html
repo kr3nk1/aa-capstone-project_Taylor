@@ -23,40 +23,43 @@
         </nav>
     </div>
 
-    <form action="/form-handling-url" method="post">
-        <fieldset>
-            <legend>Formulario de Contacto</legend>
-            <div class="column">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-            </div>
-            <div class="column">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
-            </div>
-            <div class="column">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Ingresa tu email">
-            </div>
+    <div class="form-container">
+        <form action="/form-handling-url" method="post">
+            <fieldset>
+                <legend>Formulario de Contacto</legend>
+                <div class="column">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="column">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+                </div>
+                <div class="column">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu email">
+                </div>
 
-            <div class="survey">
-                <p>Me conoces?</p>
-                <input type="checkbox" id="pregunta" name="pregunta">
-                <label for="pregunta">Si</label>
-                <input type="checkbox" id="pregunta" name="pregunta">
-                <label for="pregunta">No</label>
-            </div>
-            <div class="column">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
-            </div>
-            <div class="column">
-                <button type="submit">Enviar</button>
+                <div class="survey">
+                    <p>Me conoces?</p>
+                    <input type="checkbox" id="pregunta" name="pregunta">
+                    <label for="pregunta">Si</label>
+                    <input type="checkbox" id="pregunta" name="pregunta">
+                    <label for="pregunta">No</label>
+                </div>
+                <div class="column">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <div class="column">
+                    <button type="submit">Enviar</button>
+                </div>
 
 
 
-        </fieldset>
-    </form>
+            </fieldset>
+        </form>
+    </div>
 
 </body>
 
