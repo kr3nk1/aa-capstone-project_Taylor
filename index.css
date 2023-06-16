@@ -157,14 +157,18 @@ body .container .texto .innerTextContainer {
 }
 
 .main-img h1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   font-family: 'Caveat', cursive;
   font-size: 4rem;
   color: #FFF;
   position: absolute;
-  z-index: 2;
   bottom: 30%;
-  margin-right: 4%;
+  z-index: 2;
+
 }
+
 .h1-align {
   display: flex;
   justify-content: flex-end;
@@ -243,6 +247,6 @@ footer a {
 
   @media screen and (max-width: 450px) {
     .container .main-img h1 {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
 }
